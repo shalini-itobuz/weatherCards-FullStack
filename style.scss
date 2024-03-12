@@ -1,0 +1,596 @@
+$color_white: white;
+$font-family: sans-serif;
+$background-color_white: white;
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: $font-family;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 5%;
+}
+
+.rain-clouds,
+.thunder,
+.cloud-image,
+.moon {
+  display: none;
+}
+
+$background: #f5f6fa;
+$text: #9c9c9c;
+$input-bg-color: #fff;
+$input-text-color: #a3a3a3;
+$button-bg-color: #7f8ff4;
+$button-text-color: #fff;
+
+:root {
+  background: $background;
+  color: $text;
+  font: 1rem "PT Sans", sans-serif;
+}
+
+html,
+body,
+.container {
+  height: 100%;
+}
+
+a {
+  color: inherit;
+
+  &:hover {
+    color: $button-bg-color;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.btn {
+  display: inline-block;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  border: 0;
+  outline: 0;
+  padding: 0;
+  transition: all 200ms ease-in;
+  cursor: pointer;
+
+  &--primary {
+    background: $button-bg-color;
+    color: $button-text-color;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+    padding: 12px 36px;
+
+    &:hover {
+      background: darken($button-bg-color, 4%);
+    }
+
+    &:active {
+      background: $button-bg-color;
+      box-shadow: inset 0 0 10px 2px rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  &--inside {
+    margin-left: -96px;
+  }
+}
+
+.form {
+  &__field {
+    width: 360px;
+    background: #fff;
+    color: $input-text-color;
+    font: inherit;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+    border: 0;
+    outline: 0;
+    padding: 22px 18px;
+  }
+}
+
+.raindrops-sticker {
+  position: absolute;
+  top: 21%;
+  left: 66%;
+}
+
+.raindrop1 {
+  top: 32px;
+  left: 75px;
+  transform: rotate(30deg);
+}
+
+.raindrop2 {
+  top: 83px;
+  left: 48px;
+  transform: rotate(30deg);
+}
+
+.raindrop3 {
+  top: 35px;
+  left: 108px;
+  transform: rotate(28deg);
+}
+
+.raindrop4 {
+  top: 76px;
+  left: 85px;
+  transform: rotate(28deg);
+}
+
+.raindrop5 {
+  top: 132px;
+  left: 57px;
+  transform: rotate(28deg);
+}
+
+.raindrop6 {
+  top: 73px;
+  left: 132px;
+  transform: rotate(28deg);
+}
+
+.raindrop7 {
+  top: 119px;
+  left: 109px;
+  transform: rotate(28deg);
+}
+
+.raindrop8 {
+  top: 165px;
+  left: 82px;
+  transform: rotate(28deg);
+}
+
+.raindrop9 {
+  top: 105px;
+  left: 157px;
+  transform: rotate(28deg);
+}
+
+.raindrop10 {
+  top: 157px;
+  left: 128px;
+  transform: rotate(28deg);
+}
+
+.raindrop11 {
+  top: 103px;
+  left: 193px;
+  transform: rotate(28deg);
+  opacity: 1;
+}
+
+.raindrop12 {
+  top: 139px;
+  left: 174px;
+  transform: rotate(28deg);
+  opacity: 1;
+}
+
+.raindrop13 {
+  top: 177px;
+  left: 155px;
+  transform: rotate(28deg);
+  opacity: 1;
+}
+
+.raindrop14 {
+  top: 125px;
+  left: 216px;
+  transform: rotate(28deg);
+  opacity: 1;
+}
+
+.raindrop15 {
+  top: 161px;
+  left: 198px;
+  transform: rotate(28deg);
+  opacity: 1;
+}
+
+.raindrop16 {
+  top: 92px;
+  left: 295px;
+  transform: rotate(28deg);
+  opacity: 1;
+}
+
+.raindrop17 {
+  top: 127px;
+  left: 274px;
+  transform: rotate(28deg);
+  opacity: 1;
+}
+
+.raindrop18 {
+  top: 165px;
+  left: 252px;
+  transform: rotate(28deg);
+  opacity: 1;
+}
+
+.raindrop19 {
+  top: 125px;
+  left: 313px;
+  transform: rotate(28deg);
+  opacity: 1;
+}
+
+.raindrop20 {
+  top: 162px;
+  left: 291px;
+  transform: rotate(28deg);
+  opacity: 1;
+}
+
+.weather-type {
+  font-size: 24px;
+  color: $color_white;
+  padding-left: 3%;
+  padding-top: 2%;
+}
+
+.information {
+  display: flex;
+  width: 119%;
+  padding-left: 6%;
+}
+
+.verticalLine {
+  height: 90px;
+  width: 5px;
+  border-radius: 50%;
+  background: $color_white;
+  margin-top: 25px;
+  margin-left: 2%;
+}
+
+.degree {
+  position: absolute;
+  top: -15%;
+  left: 106%;
+}
+
+.content {
+  position: relative;
+}
+
+.season-section {
+  position: relative;
+}
+
+.temparature {
+  position: relative;
+  font-size: 70px;
+  font-weight: bold;
+  color: $color_white;
+  margin-top: 3%;
+  padding-left: -2%;
+}
+
+.weather-report {
+  display: flex;
+}
+
+.place {
+  color: $color_white;
+  font-size: 25px;
+  padding-top: 4px;
+}
+
+.day-place {
+  padding-top: 8%;
+  font-size: 25px;
+  color: $color_white;
+}
+
+.day {
+  .cloud {
+    display: none;
+  }
+
+  .moon {
+    display: none;
+  }
+
+  .rain-clouds {
+    display: none;
+  }
+
+  .thunder {
+    display: none;
+  }
+
+  .dew-drop {
+    display: none;
+  }
+
+  .weather-background {
+    background: linear-gradient(to right, #1d92ff, #46aaff, #5fbaff);
+    height: 250px;
+    width: 1000px;
+    margin: 200px auto;
+    position: relative;
+    border-radius: 30px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding: 0 75px;
+  }
+
+  .sun {
+    width: 170px;
+    height: 170px;
+    background: linear-gradient(to right, #d66900, #e8b03f, #fced0a);
+    z-index: 5;
+    border-radius: 50%;
+    position: absolute;
+    top: -12%;
+    left: 87%;
+  }
+
+  .information {
+    gap: 70px;
+  }
+
+  .sunrays {
+    width: 300px;
+    height: 300px;
+    background: $color_white;
+    z-index: 1;
+    opacity: 0.5;
+    border-radius: 50%;
+    position: absolute;
+    top: -44%;
+    left: 82%;
+    filter: blur(5px);
+  }
+
+  .sun-reflection {
+    width: 300px;
+    height: 300px;
+    background: rgba(165, 199, 254, 0.5);
+    border-radius: 50%;
+    position: absolute;
+    left: -17%;
+    top: 44%;
+  }
+
+  .day-place {
+    padding-top: 3%;
+    padding-left: 7%;
+  }
+
+  .sun-ray-light {
+    width: 400px;
+    height: 400px;
+    background: #a0d8ff;
+    z-index: 1;
+    opacity: 0.2;
+    border-radius: 50%;
+    position: absolute;
+    top: -84%;
+    left: 139%;
+  }
+
+  .sun-ray-lighter {
+    width: 400px;
+    height: 400px;
+    background: #7fc9ff;
+    z-index: 0;
+    opacity: 0.5;
+    border-radius: 50%;
+    position: absolute;
+    top: -99%;
+    left: 158%;
+  }
+}
+
+.night {
+  .weather-background {
+    background: linear-gradient(to right, #551fe8, #de37f8, #c062e3);
+    // height: 250px;
+    width: 1000px;
+    margin: 200px auto;
+    position: relative;
+    border-radius: 30px;
+    overflow: hidden;
+  }
+
+  .cloud-image,
+  .moon {
+    display: block;
+  }
+
+  .day-place {
+    padding-top: 3%;
+    padding-left: 7%;
+  }
+
+  .sun {
+    display: none;
+  }
+
+  .thunder {
+    display: none;
+  }
+
+  .raindrop1 {
+    top: 21px;
+    left: 52px;
+  }
+
+  .raindrop2 {
+    top: 83px;
+    left: 17px;
+  }
+
+  .raindrop6 {
+    top: -11px;
+    left: 171px;
+  }
+
+  .raindrop8 {
+    top: 150px;
+    left: 106px;
+  }
+
+  .raindrop4 {
+    top: 83px;
+    left: 85px;
+  }
+
+  .raindrop2,
+  .raindrop4,
+  .raindrop6,
+  .raindrop8 {
+    height: 10px !important;
+    width: 10px !important;
+  }
+
+  .rain-clouds,
+  .raindrop7,
+  .raindrop9,
+  .raindrop10,
+  .raindrop11,
+  .raindrop12,
+  .raindrop13,
+  .raindrop14,
+  .raindrop15,
+  .raindrop16,
+  .raindrop17,
+  .raindrop18,
+  .raindrop19,
+  .raindrop20 {
+    display: none;
+  }
+
+  .information {
+    gap: 70px;
+  }
+
+  .cloud-image {
+    width: 65%;
+    margin-left: 101%;
+    position: relative;
+    filter: blur(1px);
+  }
+
+  .moon {
+    position: absolute;
+    width: 9%;
+    top: 14%;
+    left: 90%;
+    transform: rotate(-20deg);
+  }
+
+  .night-rain {
+    .rain-drop {
+      height: 30px;
+      width: 30px;
+      border-radius: 50%;
+      opacity: 0.6;
+      background-color: $background-color_white;
+      position: absolute;
+      filter: blur(4px);
+    }
+  }
+}
+
+.rainy {
+  .weather-background {
+    background: linear-gradient(to right, #01bfa4, #39d8a4, #8bfca1);
+    height: 250px;
+    width: 1000px;
+    margin: 200px auto;
+    position: relative;
+    border-radius: 30px;
+    overflow: hidden;
+  }
+
+  .weather-type {
+    padding-left: 6%;
+  }
+
+  .weather-report {
+    padding-top: 2%;
+  }
+
+  .sun {
+    display: none;
+  }
+
+  .dew-drop {
+    display: none;
+  }
+
+  .moon {
+    display: none;
+  }
+
+  .degree {
+    position: absolute;
+    top: -15%;
+    left: 106%;
+  }
+
+  .information {
+    gap: 70px;
+  }
+
+  .thunder {
+    width: 5%;
+    position: absolute;
+    top: 58%;
+    left: 89%;
+  }
+
+  .rain-clouds {
+    width: 20%;
+    margin-left: 81%;
+    position: absolute;
+    margin-top: -16px;
+  }
+
+  .day-place {
+    padding-top: 3%;
+    padding-left: 7%;
+  }
+
+  .rain-clouds,
+  .thunder {
+    display: block;
+  }
+
+  .rainy-rain {
+    .rain-drop {
+      height: 30px;
+      width: 5px;
+      border-radius: 50%;
+      opacity: 0.6;
+      background-color: $background-color_white;
+      position: absolute;
+      filter: blur(2px);
+    }
+  }
+}

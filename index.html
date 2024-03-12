@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Season Cards</title>
+
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+  <section class="season-section sunny">
+    <div class="container">
+      <div class="container__item">
+        <form class="form">
+          <input type="text" id="locationInput" class="form__field" placeholder="Enter Location" />
+          <button type="button" class="btn btn--primary btn--inside uppercase" onclick="getWeather()">
+            Send
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <div id="weatherInfo"></div>
+    <div class="weather-background">
+      <div class="sun"></div>
+
+      <div class="sunrays"></div>
+      <div class="content">
+        <div>
+          <img class="rain-clouds" src="./images/cloud-solid.svg" alt="cloud" />
+        </div>
+        <img class="thunder" src="./images/thunder.svg" alt="thunder" />
+
+        <div class="night-rain rainy-rain raindrops-sticker">
+          <div class="rain-drop raindrop1"></div>
+          <div class="rain-drop raindrop2"></div>
+          <div class="rain-drop raindrop3"></div>
+          <div class="rain-drop raindrop4"></div>
+          <div class="rain-drop raindrop5"></div>
+          <div class="rain-drop raindrop6"></div>
+          <div class="rain-drop raindrop7"></div>
+          <div class="rain-drop raindrop8"></div>
+          <div class="rain-drop raindrop9"></div>
+          <div class="rain-drop raindrop10"></div>
+          <div class="rain-drop raindrop11"></div>
+          <div class="rain-drop raindrop12"></div>
+          <div class="rain-drop raindrop13"></div>
+          <div class="rain-drop raindrop14"></div>
+          <div class="rain-drop raindrop15"></div>
+          <div class="rain-drop raindrop16"></div>
+          <div class="rain-drop raindrop17"></div>
+          <div class="rain-drop raindrop18"></div>
+          <div class="rain-drop raindrop19"></div>
+          <div class="rain-drop raindrop20"></div>
+        </div>
+
+        <div class="weather-type"></div>
+
+        <div class="information">
+          <div class="weather-report">
+            <div class="temparature"></div>
+            <div class="verticalLine"></div>
+            <div class="day-place" id="datePlace"></div>
+            <div class="cloud">
+              <img class="cloud-image" src="./images/cloud-solid.svg" alt="cloud" />
+              <img class="moon" src="./images/moon.png" alt="moon" />
+            </div>
+          </div>
+        </div>
+        <div class="cloud">
+          <div class="cloud-image"></div>
+        </div>
+        <div class="arc-design"></div>
+        <div class="sun-ray-light"></div>
+        <div class="sun-ray-lighter"></div>
+      </div>
+    </div>
+  </section>
+  <script src="./script.js"></script>
+</body>
+
+</html>
